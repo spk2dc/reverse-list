@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848,1979.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugad="clr-namespace:UiPath.GSuite.Activities.Docs;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848,2154.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugad="clr-namespace:UiPath.GSuite.Activities.Docs;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -34,6 +34,11 @@
       <x:String>UiPath.Activities.System.Arrays</x:String>
       <x:String>UiPath.GSuite.Activities.Enums</x:String>
       <x:String>UiPath.GSuite.Activities.Contracts</x:String>
+      <x:String>System.Windows.Documents</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Windows.Threading</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,26 +91,31 @@
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>PresentationUI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="592,1914.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="592,2089.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="list" />
-      <Variable x:TypeArguments="s:String[]" Name="reversed" />
       <Variable x:TypeArguments="x:String" Name="allText" />
+      <Variable x:TypeArguments="scg:IList(x:String)" Name="reversed" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ugad:GoogleDocsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" Timeout="{x:Null}" Account="senthil.kannan.61109@gmail.com" Action="UseExisting" Connector="uipath-google-docs" DisplayName="Use Google Document" DocumentId="https://docs.google.com/document/d/1ZNAQScv5nT8tWubkTcsv0dUyOPaesWK7spACBX0znuQ/edit?usp=drivesdk" DocumentName="reverse test list" sap:VirtualizedContainerService.HintSize="529.6,1802.4" sap2010:WorkflowViewState.IdRef="GoogleDocsApplicationScope_1" Mode="Browse" UseConnectionService="False" UserEmail="senthil.kannan.61109@gmail.com">
+    <ugad:GoogleDocsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" Timeout="{x:Null}" Account="senthil.kannan.61109@gmail.com" Action="UseExisting" Connector="uipath-google-docs" DisplayName="Use Google Document" DocumentId="https://docs.google.com/document/d/1ZNAQScv5nT8tWubkTcsv0dUyOPaesWK7spACBX0znuQ/edit?usp=drivesdk" DocumentName="reverse test list" sap:VirtualizedContainerService.HintSize="529.6,1977.6" sap2010:WorkflowViewState.IdRef="GoogleDocsApplicationScope_1" Mode="Browse" UseConnectionService="False" UserEmail="senthil.kannan.61109@gmail.com">
       <ugad:GoogleDocsApplicationScope.Body>
         <ActivityAction x:TypeArguments="ugad:IGoogleDocTarget">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ugad:IGoogleDocTarget" Name="Document" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1520" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1695.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -120,11 +130,12 @@
                 <InArgument x:TypeArguments="s:String[]">[allText.Split(vbLf, StringSplitOptions.RemoveEmptyEntries)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:Char" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,412.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[allText]">
+            <ui:CreateList x:TypeArguments="x:String" DisplayName="Create List" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="CreateList`1_1" NewList="[reversed]" />
+            <ui:ForEach x:TypeArguments="x:Char" CurrentIndex="{x:Null}" DisplayName="For Each - original google doc" sap:VirtualizedContainerService.HintSize="433.6,412.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[allText]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Char">
                   <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Char" Name="currentItem" />
+                    <DelegateInArgument x:TypeArguments="x:Char" Name="currentItem1" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,224.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
@@ -137,20 +148,20 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;reversed list(0): &quot;+reversed(0)]" />
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,470.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[reversed]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - reversed list" sap:VirtualizedContainerService.HintSize="433.6,652.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[reversed]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem2" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,282.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="377.6,464.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uga:InsertText ContinueOnError="{x:Null}" DocumentId="{x:Null}" Index="{x:Null}" Request="{x:Null}" AuthScopesInvalid="False" DisplayName="Insert Text" GoogleDoc="[Document]" sap:VirtualizedContainerService.HintSize="333.6,192.8" sap2010:WorkflowViewState.IdRef="InsertText_1" IsInsideBatchUpdateScope="False" Position="END" Text="[reversed(0)]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;appending: &quot;+currentItem2]" />
+                    <uga:InsertText ContinueOnError="{x:Null}" DocumentId="{x:Null}" Index="{x:Null}" Request="{x:Null}" AuthScopesInvalid="False" DisplayName="Insert Text" GoogleDoc="[Document]" sap:VirtualizedContainerService.HintSize="334.4,192.8" sap2010:WorkflowViewState.IdRef="InsertText_1" IsInsideBatchUpdateScope="False" Position="END" Text="[currentItem2]" />
                   </Sequence>
                 </ActivityAction>
               </ui:ForEach.Body>
