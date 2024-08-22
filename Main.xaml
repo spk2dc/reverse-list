@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848.8,2218.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugad="clr-namespace:UiPath.GSuite.Activities.Docs;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848.8,1967.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugad="clr-namespace:UiPath.GSuite.Activities.Docs;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -120,7 +120,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="608,2153.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="608,1902.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="list" />
       <Variable x:TypeArguments="x:String" Name="allText" />
@@ -131,13 +131,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ugad:GoogleDocsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" Timeout="{x:Null}" Account="senthil.kannan.61109@gmail.com" Action="UseExisting" Connector="uipath-google-docs" DisplayName="Use Google Document" DocumentId="https://docs.google.com/document/d/1ZNAQScv5nT8tWubkTcsv0dUyOPaesWK7spACBX0znuQ/edit?usp=drivesdk" DocumentName="reverse test list" sap:VirtualizedContainerService.HintSize="545.6,2064.8" sap2010:WorkflowViewState.IdRef="GoogleDocsApplicationScope_1" Mode="Browse" UseConnectionService="False" UserEmail="senthil.kannan.61109@gmail.com">
+    <ugad:GoogleDocsApplicationScope ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" Timeout="{x:Null}" Account="senthil.kannan.61109@gmail.com" Action="UseExisting" ConnectionAccountName="senthil.kannan.61109@gmail.com" ConnectionId="ece9d026-9621-4d8e-af5f-584eb432c485" Connector="uipath-google-docs" DisplayName="Use Google Document" DocumentId="https://docs.google.com/document/d/1ZNAQScv5nT8tWubkTcsv0dUyOPaesWK7spACBX0znuQ/edit?usp=drivesdk" DocumentName="reverse test list" sap:VirtualizedContainerService.HintSize="545.6,1813.6" sap2010:WorkflowViewState.IdRef="GoogleDocsApplicationScope_1" Mode="Browse" UseConnectionService="True" UserEmail="senthil.kannan.61109@gmail.com">
       <ugad:GoogleDocsApplicationScope.Body>
         <ActivityAction x:TypeArguments="ugad:IGoogleDocTarget">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ugad:IGoogleDocTarget" Name="Document" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1759.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1508" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,31 +161,8 @@
               </Assign.Value>
             </Assign>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;List Reversed (first element): &quot;+list(0).ToString]" />
-            <ui:Comment sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text=" while (text in google doc) {remove}" />
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="449.6,514.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
-              <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,368" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uga:DeleteTextConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" File="{x:Null}" FileIdBackup="{x:Reference __ReferenceID0}" ManualFileId="{x:Null}" MatchCase="{x:Null}" Section="{x:Null}" Text="{x:Null}" AuthScopesInvalid="False" BrowserFileId="https://docs.google.com/document/d/1ZNAQScv5nT8tWubkTcsv0dUyOPaesWK7spACBX0znuQ/edit?usp=drivesdk" ConnectionId="ece9d026-9621-4d8e-af5f-584eb432c485" DeleteBehavior="Once" DeleteTextMode="Text" DisplayName="Delete Text" FileFriendlyName="reverse test list" FileInputMode="Browse" sap:VirtualizedContainerService.HintSize="353.6,279.2" sap2010:WorkflowViewState.IdRef="DeleteTextConnections_1" MatchMode="Contains" UseConnectionService="True">
-                    <uga:DeleteTextConnections.Item>
-                      <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FriendlyName="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/document/d/1ZNAQScv5nT8tWubkTcsv0dUyOPaesWK7spACBX0znuQ/edit?usp=drivesdk" ConnectionKey="ece9d026-9621-4d8e-af5f-584eb432c485" FullPathHint="My Drive/reverse test list" InputMode="Browse">
-                        <ugam:DriveItemArgument.Backup>
-                          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
-                            <usau:BackupSlot.BackupValues>
-                              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
-                            </usau:BackupSlot.BackupValues>
-                          </usau:BackupSlot>
-                        </ugam:DriveItemArgument.Backup>
-                      </ugam:DriveItemArgument>
-                    </uga:DeleteTextConnections.Item>
-                  </uga:DeleteTextConnections>
-                </Sequence>
-              </ui:InterruptibleWhile.Body>
-            </ui:InterruptibleWhile>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="449.6,126.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="delete all text manually&#xA;&#xA;&#xA;while (not at end of list) {write current item}" />
+            <uga:InsertText ContinueOnError="{x:Null}" DocumentId="{x:Null}" Index="{x:Null}" Request="{x:Null}" AuthScopesInvalid="False" DisplayName="Insert Text" GoogleDoc="[Document]" sap:VirtualizedContainerService.HintSize="449.6,224.8" sap2010:WorkflowViewState.IdRef="InsertText_3" IsInsideBatchUpdateScope="False" Position="END" Text="-----------Reversed list start-----------" />
             <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - reverse test list" sap:VirtualizedContainerService.HintSize="449.6,493.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
